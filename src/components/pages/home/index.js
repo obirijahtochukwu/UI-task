@@ -28,7 +28,6 @@ export default function Home() {
             fontSize: "24px",
             fontFamily: "inter",
             opacity: "0.9",
-            cursor: "pointer",
           }}
           justify="space-between"
         >
@@ -41,6 +40,7 @@ export default function Home() {
               color: "#056CE5",
               fontWeight: "400",
               fontSize: "14px",
+              cursor: "pointer",
             }}
             gap={"4px"}
           >
@@ -58,10 +58,10 @@ export default function Home() {
         >
           <Flex align="center" justify="space-between">
             <Flex
-              gap={"7px"}
               style={{
                 padding: "9px 16px",
-                width: "368px",
+                height: "21px",
+                width: "336px",
                 borderRadius: "8px",
                 border: "1px solid rgba(0, 0, 0, 0.10)",
               }}
@@ -85,8 +85,8 @@ export default function Home() {
                 fontSize: "14px",
                 fontFamily: "inter",
                 fontWeight: "500",
-                padding: "10px 24px",
-                height: "fit-content",
+                height: "38px",
+                width: "102px",
               }}
             >
               Classify

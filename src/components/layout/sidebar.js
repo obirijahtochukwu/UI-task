@@ -22,7 +22,11 @@ export default function Sidebar({ children }) {
         }}
         gap={"24px"}
       >
-        <Flex style={{ fontSize: "19px" }} gap={"8px"} align="center">
+        <Flex
+          style={{ fontSize: "19px", fontFamily: "milgran" }}
+          gap={"8px"}
+          align="center"
+        >
           <Icons.logo /> Forecxt-IQ
         </Flex>
         <Flex
@@ -43,7 +47,7 @@ export default function Sidebar({ children }) {
                   key={idx}
                   onClick={() => setActivePage(title)}
                   style={{
-                    fontSize: "19px",
+                    fontSize: "16px",
                     padding: "12px 16px",
                     whiteSpace: "nowrap",
                     borderRadius: "34px",
@@ -64,7 +68,7 @@ export default function Sidebar({ children }) {
         />
         <Flex
           style={{
-            fontSize: "19px",
+            fontSize: "16px",
             padding: "0px 16px",
             borderRadius: "34px",
             cursor: "pointer",
@@ -81,7 +85,7 @@ export default function Sidebar({ children }) {
               idx > 6 && (
                 <Flex
                   style={{
-                    fontSize: "19px",
+                    fontSize: "16px",
                     padding: "12px 16px",
                     borderRadius: "34px",
                     cursor: "pointer",

@@ -39,6 +39,7 @@ export default function Products({ currentPage, setCurrentPage }) {
         style={{
           flexDirection: "column",
           border: "1px solid rgba(0, 0, 0, 0.05)",
+          borderRadius: "0px 0px 24px 24px",
         }}
       >
         {duplicate_items.map(
@@ -66,6 +67,7 @@ export default function Products({ currentPage, setCurrentPage }) {
                           fontSize: "14px",
                           fontWeight: "500",
                           color: "",
+                          lineHeight: "18.2px",
                         }}
                       >
                         {product.name}
@@ -75,6 +77,7 @@ export default function Products({ currentPage, setCurrentPage }) {
                           fontSize: "10px",
                           fontWeight: "400",
                           color: "rgba(0, 0, 0, 0.50)",
+                          lineHeight: "14px",
                         }}
                       >
                         {product.color}
@@ -83,7 +86,7 @@ export default function Products({ currentPage, setCurrentPage }) {
                         style={{
                           fontSize: "12px",
                           fontWeight: "500",
-                          color: "",
+                          lineHeight: "15.6px",
                         }}
                       >
                         {product.price}
@@ -105,9 +108,12 @@ export default function Products({ currentPage, setCurrentPage }) {
                     style={{
                       width: "32px",
                       height: "32px",
-                      color: "#B7EB8F",
-                      background: "#F6FFED",
-                      border: "1px solid #B7EB8F",
+                      color: classify == "A" ? "#52C41A" : "#FAAD14",
+                      background: classify == "A" ? "#F6FFED" : "#FFFBE6",
+                      border:
+                        classify == "A"
+                          ? "1px solid #B7EB8F"
+                          : "1px solid #FFE58F",
                       borderRadius: "100%",
                       fontWeight: "700",
                       fontSize: "12px",
@@ -157,7 +163,18 @@ export default function Products({ currentPage, setCurrentPage }) {
                   span={3}
                 >
                   <Input
-                    addonBefore={<>Unit</>}
+                    addonBefore={
+                      <div
+                        style={{
+                          fontFamily: "inter",
+                          fontSize: "12px",
+                          fontWeight: "400",
+                          color: "rgba(0, 0, 0, 0.80)",
+                        }}
+                      >
+                        Unit
+                      </div>
+                    }
                     defaultValue={unit}
                     placeholder={unit || "Stock"}
                     style={{ maxWidth: "129px" }}
@@ -172,7 +189,18 @@ export default function Products({ currentPage, setCurrentPage }) {
                   span={3}
                 >
                   <Input
-                    addonBefore={<>AUD</>}
+                    addonBefore={
+                      <div
+                        style={{
+                          fontFamily: "inter",
+                          fontSize: "12px",
+                          fontWeight: "400",
+                          color: "rgba(0, 0, 0, 0.80)",
+                        }}
+                      >
+                        AUD
+                      </div>
+                    }
                     defaultValue={holding_cost}
                     placeholder={holding_cost || "Amount"}
                     style={{ maxWidth: "129px" }}
@@ -197,8 +225,9 @@ export default function Products({ currentPage, setCurrentPage }) {
                       borderRadius: "50px",
                       fontWeight: "500",
                       fontSize: "12px",
-                      height: "fit-content",
+                      height: "38px",
                       float: "right",
+                      width: "81px",
                     }}
                   >
                     Save
